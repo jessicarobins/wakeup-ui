@@ -13,6 +13,7 @@ export class Station {
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class StationService {
@@ -23,6 +24,7 @@ export class StationService {
   
   getStations() : Observable<any> { 
     return this.http.get(this.url)
+      .map(response => response.json() as Station[]);
   }
 
 }
