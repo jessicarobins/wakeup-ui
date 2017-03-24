@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Station } from './station.service'
+import { Station, StationService } from './station.service'
 
 @Component({
   selector: 'app-station-page',
@@ -12,18 +12,25 @@ export class StationPageComponent implements OnInit {
 
   stations: Station[]
   station: Station
+  stationData: Station
   
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private ss: StationService
   ) {}
 
   ngOnInit() {
     this.route.data
       .subscribe((data: { stations: Station[] }) => {
         this.stations = data.stations
-        this.station = this.stations[0]
       });
   }
-
+  
+  changeStation() {
+    this.ss.getStation(this.station.id)
+      .then((data) => {
+        this.stationData = data
+      })
+  }
 }
