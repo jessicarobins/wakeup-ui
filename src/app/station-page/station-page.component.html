@@ -4,8 +4,8 @@
  <div>
   <label>Station</label>
   <div>
-      <select [(ngModel)]="x">
-          <option *ngFor="let s of stations" [value]="s.id">{{s.name}}</option>
-      </select>
+    <select [(ngModel)]="station">
+      <option *ngFor="let s of stations" [ngValue]="s" >{{s.name}}</option>
+    </select>
   </div>
 </div>
