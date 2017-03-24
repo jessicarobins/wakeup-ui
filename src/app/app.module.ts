@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StationPageComponent } from './station-page/station-page.component';
 
+import { StationResolver } from './station-page/station-resolver.service'
+import { StationService } from './station-page/station.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,7 @@ import { StationPageComponent } from './station-page/station-page.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [StationResolver, StationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
