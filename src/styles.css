@@ -18,6 +18,6 @@
   font-size: 1.5rem;
 }
 
-.ng2-auto-complete.item::hover {
+.ng2-auto-complete > ul li {
   cursor: pointer;
 }

@@ -22,13 +22,13 @@
           <span class="icon is-large" *ngIf="!station">
             <i class="fa fa-angle-down"></i>
           </span>
+          <span
+            (click)="removeStation()"
+            class="icon is-medium remove-station"
+            *ngIf="station">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+          </span>
         </p>
-      </div>
-      <div class="select is-large">
-        <select [(ngModel)]="station" (change)="changeStation($event)">
-          <option [value]="undefined" hidden disabled selected>Select a station</option>
-          <option *ngFor="let s of stations" [ngValue]="s" >{{s.name}}</option>
-        </select>
       </div>
     </div>
     <div

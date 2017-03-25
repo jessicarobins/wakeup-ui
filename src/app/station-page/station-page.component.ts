@@ -60,4 +60,9 @@ export class StationPageComponent implements OnInit {
         .format("k:mm")} AM`
     }
   }
+  
+  removeStation() {
+    this.station = null
+    this.stationData = null
+  }
 }

@@ -16,8 +16,13 @@
   flex: 1;
 }
 
-.has-icon-right .icon.is-large {
+.has-icon-right .icon {
   height: 3.5rem;
   width: 3.5rem;
   color: #00d1b2;
+}
+
+.control.has-icon .icon.remove-station {
+  cursor: pointer;
+  pointer-events: all;
 }
