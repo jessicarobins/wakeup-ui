@@ -1,11 +1,9 @@
 <div>
-  <label>Station</label>
-  <div>
-    <select [(ngModel)]="station" (change)="changeStation($event)">
-      <option *ngFor="let s of stations" [ngValue]="s" >{{s.name}}</option>
-    </select>
-  </div>
-  <div *ngIf="!!stationData">
-    {{stationData.median_last_bike}}
-  </div>
+  <select [(ngModel)]="station" (change)="changeStation($event)">
+    <option [value]="undefined" hidden disabled selected>Select a station</option>
+    <option *ngFor="let s of stations" [ngValue]="s" >{{s.name}}</option>
+  </select>
+</div>
+<div *ngIf="!!stationData">
+  {{time()}}
 </div>

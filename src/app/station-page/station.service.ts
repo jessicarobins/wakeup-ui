@@ -7,7 +7,8 @@ export class Station {
     public region_id: number,
     public capacity: number,
     public latitude: number,
-    public longitude: number) { }
+    public longitude: number,
+    public median_last_bike: string) {}
 }
 
 import { Injectable } from '@angular/core';

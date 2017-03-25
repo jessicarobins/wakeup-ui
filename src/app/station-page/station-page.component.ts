@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import * as moment from 'moment'
 
 import { Station, StationService } from './station.service'
 
@@ -32,5 +33,10 @@ export class StationPageComponent implements OnInit {
       .then((data) => {
         this.stationData = data
       })
+  }
+  
+  time() {
+    return `${moment(this.stationData.median_last_bike, "Hmmss")
+      .format("k:mm")} AM`
   }
 }
