@@ -1,21 +1,22 @@
 <section class="hero is-primary is-bold is-fullheight has-text-centered">
   <div class="hero-body container">
-    <div class="form-container">
+    <div
+      [@stationFormSize]="!!stationData"
+      class="form-container">
       <h1
-        [ngClass]="{'very-big': !this.stationData, 'is-1': !!this.stationData}"
-        class="title">
+        class="title is-1">
         when's the last bike at
       </h1>
-      <div
-        [ngClass]="{'is-large': !this.stationData, 'is-medium': !!this.stationData}"
-        class="select">
+      <div class="select is-large">
         <select [(ngModel)]="station" (change)="changeStation($event)">
           <option [value]="undefined" hidden disabled selected>Select a station</option>
           <option *ngFor="let s of stations" [ngValue]="s" >{{s.name}}</option>
         </select>
       </div>
     </div>
-    <div *ngIf="!!stationData" class="time">
+    <div
+      [@stationTimeSize]="!!stationData"
+      class="time">
       <p class="title very-very-big">
         {{time()}}
       </p>

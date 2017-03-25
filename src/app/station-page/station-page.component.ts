@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,
+  trigger, state, animate, transition, style } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import * as moment from 'moment'
 
 import { Station, StationService } from './station.service'
@@ -7,7 +9,24 @@ import { Station, StationService } from './station.service'
 @Component({
   selector: 'app-station-page',
   templateUrl: './station-page.component.html',
-  styleUrls: ['./station-page.component.css']
+  styleUrls: ['./station-page.component.css'],
+  animations: [
+    trigger('stationFormSize', [
+      state('false', style({
+        transform: 'scale(1)'
+      })),
+      state('true',   style({
+        transform: 'scale(.5)'
+      })),
+      transition('* => *', animate('400ms ease-in-out')),
+    ]),
+    trigger('stationTimeSize', [
+      transition('* => *', [
+        style({transform: 'scale(0)'}),
+        animate(500, style({transform: 'scale(1)'})) 
+      ])
+    ])
+  ]
 })
 export class StationPageComponent implements OnInit {
 
@@ -36,7 +55,9 @@ export class StationPageComponent implements OnInit {
   }
   
   time() {
-    return `${moment(this.stationData.median_last_bike, "Hmmss")
-      .format("k:mm")} AM`
+    if (this.stationData) {
+      return `${moment(this.stationData.median_last_bike, "Hmmss")
+        .format("k:mm")} AM`
+    }
   }
 }
