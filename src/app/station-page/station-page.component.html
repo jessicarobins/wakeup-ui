@@ -7,6 +7,18 @@
         class="title is-1">
         when's the last bike at
       </h1>
+      <div class="field">
+        <input
+          class="input is-large"
+          auto-complete
+          [(ngModel)]="station"
+          [source]="stations"
+          display-property-name="name"
+          placeholder="Select a station"
+          value-formatter="name"
+          list-formatter="name"
+          [match-formatted]="true"/>
+        </div>
       <div class="select is-large">
         <select [(ngModel)]="station" (change)="changeStation($event)">
           <option [value]="undefined" hidden disabled selected>Select a station</option>
