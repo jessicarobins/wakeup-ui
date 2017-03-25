@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bulma/css/bulma.css';
-
+@import '~font-awesome/css/font-awesome.min.css';
 
 .very-big {
   font-size: 5rem;
@@ -8,4 +8,16 @@
 
 .very-very-big {
   font-size: 8rem;
+}
+
+.ng2-auto-complete {
+  color: #00d1b2;
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 1.5rem;
+}
+
+.ng2-auto-complete.item::hover {
+  cursor: pointer;
 }
