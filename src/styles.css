@@ -2,6 +2,10 @@
 @import '~bulma/css/bulma.css';
 
 
-.very-very-big {
+.very-big {
   font-size: 5rem;
+}
+
+.very-very-big {
+  font-size: 8rem;
 }

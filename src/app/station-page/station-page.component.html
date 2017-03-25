@@ -1,8 +1,8 @@
-<section class="hero is-primary is-bold is-fullheight">
-  <div class="hero-body">
-    <div class="container has-text-centered">
+<section class="hero is-primary is-bold is-fullheight has-text-centered">
+  <div class="hero-body container">
+    <div class="form-container">
       <h1
-        [ngClass]="{'very-very-big': !this.stationData, 'is-1': !!this.stationData}"
+        [ngClass]="{'very-big': !this.stationData, 'is-1': !!this.stationData}"
         class="title">
         when's the last bike at
       </h1>
@@ -14,9 +14,12 @@
           <option *ngFor="let s of stations" [ngValue]="s" >{{s.name}}</option>
         </select>
       </div>
-      <div *ngIf="!!stationData" class="title very-very-big">
+    </div>
+    <div *ngIf="!!stationData" class="time">
+      <p class="title very-very-big">
         {{time()}}
-      </div>
+      </p>
     </div>
   </div>
+  
 </section>
