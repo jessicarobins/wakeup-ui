@@ -9,3 +9,14 @@
 .very-very-big {
   font-size: 8rem;
 }
+
+.completer-no-results,
+.completer-searching,
+.completer-item-text {
+  color: #00d1b2;
+  text-align: left;
+}
+
+.input.completer-input {
+  border-radius: 3px;
+}

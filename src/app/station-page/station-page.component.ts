@@ -1,6 +1,7 @@
-import { Component, OnInit,
+import { Component, OnInit, ViewChild,
   trigger, state, animate, transition, style } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CompleterService, CompleterData, CompleterCmp } from 'ng2-completer';
 
 import * as moment from 'moment'
 
@@ -33,17 +34,22 @@ export class StationPageComponent implements OnInit {
   stations: Station[]
   station: Station
   stationData: Station
+  dataService: CompleterData
+  
+  @ViewChild("completer") private completer: CompleterCmp;
   
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private ss: StationService
+    private ss: StationService,
+    private completerService: CompleterService
   ) {}
 
   ngOnInit() {
     this.route.data
       .subscribe((data: { stations: Station[] }) => {
         this.stations = data.stations
+        this.dataService = this.completerService.local(this.stations, 'name', 'name')
       });
   }
   
@@ -59,5 +65,13 @@ export class StationPageComponent implements OnInit {
       return `${moment(this.stationData.median_last_bike, "Hmmss")
         .format("k:mm")} AM`
     }
+  }
+  
+  public onOpen() {
+      this.completer.open('');
+  }
+
+  public onClose() {
+      this.completer.close();
   }
 }

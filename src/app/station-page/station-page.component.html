@@ -7,6 +7,18 @@
         class="title is-1">
         when's the last bike at
       </h1>
+      <button (click)="onOpen()">open</button>
+      <button (click)="onClose()">close</button>
+      <div class="field">
+        <ng2-completer
+          #completer
+          [(ngModel)]="station"
+          [datasource]="dataService"
+          [minSearchLength]="0"
+          [placeholder]="'select a station'"
+          [textNoResults]="'No results'"
+          [inputClass]="'input is-large'"></ng2-completer>
+      </div>
       <div class="select is-large">
         <select [(ngModel)]="station" (change)="changeStation($event)">
           <option [value]="undefined" hidden disabled selected>Select a station</option>

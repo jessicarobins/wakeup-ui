@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Ng2CompleterModule } from 'ng2-completer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,9 +20,13 @@ import { StationService } from './station-page/station.service'
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2CompleterModule
   ],
-  providers: [StationResolver, StationService],
+  providers: [
+    StationResolver,
+    StationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
