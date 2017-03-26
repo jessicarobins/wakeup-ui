@@ -12,19 +12,31 @@ import { Station, StationService } from './station.service'
   styleUrls: ['./station-page.component.css'],
   animations: [
     trigger('stationFormSize', [
+      state('true', style({
+        flex: '.0001',
+      })),
+      state('false',   style({
+        flex: '1'
+      })),
+      transition('* => *', animate('.5s'))
+    ]),
+    trigger('stationTitleSize', [
       state('false', style({
-        transform: 'scale(1)'
+        transform: 'scale(1)',
       })),
       state('true',   style({
-        transform: 'scale(.5)'
+        transform: 'scale(.5)',
       })),
-      transition('* => *', animate('400ms ease-in-out')),
+      transition('* => *', animate('400ms ease-in-out'))
     ]),
     trigger('stationTimeSize', [
-      transition('* => *', [
-        style({transform: 'scale(0)'}),
-        animate(500, style({transform: 'scale(1)'})) 
-      ])
+      state('false', style({
+        flex: '.0001',
+      })),
+      state('true',   style({
+        flex: '1'
+      })),
+      transition('* => *', animate('.5s'))
     ])
   ]
 })

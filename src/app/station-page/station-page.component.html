@@ -1,9 +1,11 @@
 <section class="hero is-primary is-bold is-fullheight has-text-centered">
   <div class="hero-body container">
-    <div class="form-container">
+    <div
+      [@stationFormSize]="!!stationData"
+      class="form-container">
       <h1
-        [@stationFormSize]="!!stationData"
-        class="title is-1">
+        [@stationTitleSize]="!!stationData"
+        class="title very-big">
         when's the last bike at
       </h1>
       <div class="field">
@@ -32,8 +34,7 @@
       </div>
     </div>
     <div
-      [@stationTimeSize]="!!stationData"
-      class="time">
+      [@stationTimeSize]="!!stationData">
       <p class="title very-very-big">
         {{time()}}
       </p>
