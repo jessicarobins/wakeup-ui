@@ -8,7 +8,7 @@ export class Station {
     public capacity: number,
     public latitude: number,
     public longitude: number,
-    public median_last_bike: string,
+    public statistics: any,
     public route_name: string) {}
 }
 

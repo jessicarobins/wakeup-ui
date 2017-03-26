@@ -3,8 +3,6 @@ import { Component, OnInit,
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common'
 
-import * as moment from 'moment'
-
 import { Station, StationService } from './station.service'
 
 @Component({
@@ -76,8 +74,9 @@ export class StationPageComponent implements OnInit {
   
   time() {
     if (this.stationData) {
-      return `${moment(this.stationData.median_last_bike, "Hmmss")
-        .format("k:mm")} AM`
+      return this.stationData.statistics.mean ? 
+        `${this.stationData.statistics.mean} AM`
+        : 'No data'
     }
   }
   
