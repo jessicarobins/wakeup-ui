@@ -1,6 +1,7 @@
 import { Component, OnInit,
   trigger, state, animate, transition, style } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common'
 
 import * as moment from 'moment'
 
@@ -49,7 +50,8 @@ export class StationPageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private ss: StationService
+    private ss: StationService,
+    private location: Location
   ) {}
 
   ngOnInit() {
@@ -65,6 +67,7 @@ export class StationPageComponent implements OnInit {
       .then((data) => {
         this.stationData = data
       })
+    this.location.replaceState(this.station.route_name)
   }
   
   time() {
@@ -77,5 +80,6 @@ export class StationPageComponent implements OnInit {
   removeStation() {
     this.station = null
     this.stationData = null
+    this.location.replaceState('/')
   }
 }
