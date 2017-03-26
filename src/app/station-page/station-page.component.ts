@@ -27,7 +27,7 @@ import { Station, StationService } from './station.service'
       state('true',   style({
         transform: 'scale(.5)',
       })),
-      transition('* => *', animate('400ms ease-in-out'))
+      transition('* => *', animate('.5s'))
     ]),
     trigger('stationTimeSize', [
       state('false', style({
