@@ -54,6 +54,7 @@
   
 </section>
 <div
+  *ngIf="!!showStationDetails"
   [ngClass]="{'is-active': !!showStationDetails}"
   class="modal">
   <div class="modal-background"></div>
