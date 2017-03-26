@@ -21,10 +21,13 @@ import { Station, StationService } from './station.service'
       transition('* => *', animate('400ms ease-in-out')),
     ]),
     trigger('stationTimeSize', [
-      transition('* => *', [
-        style({transform: 'scale(0)'}),
-        animate(500, style({transform: 'scale(1)'})) 
-      ])
+      state('false', style({
+        transform: 'scale(0)'
+      })),
+      state('true',   style({
+        transform: 'scale(1)'
+      })),
+      transition('* => *', animate('400ms ease-in-out'))
     ])
   ]
 })

@@ -1,15 +1,26 @@
 <section class="hero is-primary is-bold is-fullheight has-text-centered">
   <div class="hero-body container">
-    <div class="form-container">
+    <div class="title-container">
       <h1
         [@stationFormSize]="!!stationData"
-        class="title is-1">
+        class="title very-big">
         when's the last bike at
+        <span
+          *ngIf="!!station"
+          class="very-big tag is-warning">
+          {{station.name}}
+          <button 
+            (click)="removeStation()"
+            class="very-big delete"></button>
+        </span>
       </h1>
+    </div>
+    <div class="form-container" *ngIf="!station">
       <div class="field">
         <p class="control has-icon has-icon-right">
           <input
             class="input is-large"
+            [ngClass]="{'is-large': !stationData, 'is-medium': !!stationData}"
             auto-complete
             [(ngModel)]="station"
             [source]="stations"
