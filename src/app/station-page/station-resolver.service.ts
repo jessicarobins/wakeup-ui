@@ -25,10 +25,13 @@ export class StationResolver implements Resolve<any> {
     return this.ss.getStation(id).then(station => {
       if (station) {
         return station;
-      } else { // id not found
-        this.router.navigate(['/']);
+      } else {
+        this.router.navigate(['/'])
         return null;
       }
-    });
+    })
+    .catch(() => {
+      this.router.navigate(['/'])
+    })
   }
 }
