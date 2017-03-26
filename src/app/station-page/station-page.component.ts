@@ -45,6 +45,7 @@ export class StationPageComponent implements OnInit {
   station: Station
   stationData: Station
   isLoadingStationData: boolean
+  showStationDetails: boolean
   
   constructor(
     private route: ActivatedRoute,
@@ -59,6 +60,7 @@ export class StationPageComponent implements OnInit {
         this.stations = data.stations
         this.station = this.stationData = data.station
         this.isLoadingStationData = false;
+        this.showStationDetails = false;
       });
   }
   
@@ -83,6 +85,31 @@ export class StationPageComponent implements OnInit {
   removeStation() {
     this.station = null
     this.stationData = null
+    this.showStationDetails = false
     this.location.replaceState('/')
+  }
+  
+  toggleStationDetails() {
+    this.showStationDetails = !this.showStationDetails
+  }
+  
+  selectAllContent($event) {
+    $event.target.select();
+  }
+  
+  formattedStatistics() {
+    return {
+      median: `${this.stationData.statistics.median} AM`,
+      mean: `${this.stationData.statistics.mean} AM`,
+      'standard deviation': `${this.stationData.statistics.standard_deviation} minutes`,
+      range: `${this.stationData.statistics.range} minutes`,
+      q1: `${this.stationData.statistics.q1} AM`,
+      q3: `${this.stationData.statistics.q3} AM`,
+      min: `${this.stationData.statistics.min} AM`,
+      max: `${this.stationData.statistics.max} AM`,
+      outliers: this.stationData.statistics.outliers.map((o) => {
+        return `${o} AM`
+      })
+    }
   }
 }

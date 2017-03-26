@@ -20,7 +20,8 @@
           value-formatter="name"
           list-formatter="name"
           [match-formatted]="true"
-          (valueChanged)="changeStation($event)" />
+          (valueChanged)="changeStation($event)"
+          (focus)="selectAllContent($event)" />
         <span class="icon is-large" *ngIf="!station && !isLoadingStationData">
           <i class="fa fa-angle-down"></i>
         </span>
@@ -43,6 +44,27 @@
     <p class="title very-very-big">
       {{time()}}
     </p>
+    <a
+      [ngClass]="{'hidden': !stationData}"
+      class="button is-warning is-outlined"
+      (click)="toggleStationDetails()">
+      More info
+    </a>
   </div>
   
 </section>
+<div
+  [ngClass]="{'is-active': !!showStationDetails}"
+  class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <ul>
+      <li *ngFor="let s of formattedStatistics() | keys">
+        {{s.key}}: {{s.value}}
+      </li>
+    </ul>
+  </div>
+  <button
+    (click)="toggleStationDetails()"
+    class="modal-close"></button>
+</div>

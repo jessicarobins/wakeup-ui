@@ -39,3 +39,7 @@ body {
 .ng2-auto-complete > ul li {
   cursor: pointer;
 }
+
+.hidden {
+  visibility: hidden;
+}
