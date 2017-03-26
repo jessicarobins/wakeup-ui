@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.hero {
+  max-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
