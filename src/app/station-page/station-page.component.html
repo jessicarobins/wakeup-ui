@@ -1,5 +1,6 @@
 <section class="stations container has-text-centered">
   <div
+    [ngClass]="{'with-station': !!stationData}"
     [@stationFormSize]="!!stationData"
     class="form-container">
     <h1
