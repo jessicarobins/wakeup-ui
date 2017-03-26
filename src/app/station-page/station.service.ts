@@ -8,7 +8,8 @@ export class Station {
     public capacity: number,
     public latitude: number,
     public longitude: number,
-    public median_last_bike: string) {}
+    public median_last_bike: string,
+    public route_name: string) {}
 }
 
 import { Injectable } from '@angular/core';
@@ -29,8 +30,8 @@ export class StationService {
       .map(response => response.json() as Station[]);
   }
   
-  getStation(id: number): Promise<Station> {
-    return this.http.get(`${this.url}/${id}`)
+  getStation(route: string): Promise<Station> {
+    return this.http.get(`${this.url}/${route}/show_by_route_name`)
       .toPromise()
       .then(response => response.json() as Station)
   }

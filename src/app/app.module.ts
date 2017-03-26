@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StationPageComponent } from './station-page/station-page.component';
 
-import { StationResolver } from './station-page/station-resolver.service'
+import { StationResolver, StationsResolver } from './station-page/station-resolver.service'
 import { StationService } from './station-page/station.service'
 
 @NgModule({
@@ -23,7 +23,11 @@ import { StationService } from './station-page/station.service'
     AppRoutingModule,
     Ng2AutoCompleteModule
   ],
-  providers: [StationResolver, StationService],
+  providers: [
+    StationResolver,
+    StationsResolver,
+    StationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

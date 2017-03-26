@@ -54,13 +54,14 @@ export class StationPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.data
-      .subscribe((data: { stations: Station[] }) => {
+      .subscribe((data: { stations: Station[], station: Station }) => {
         this.stations = data.stations
+        this.station = this.stationData = data.station
       });
   }
   
   changeStation() {
-    this.ss.getStation(this.station.id)
+    this.ss.getStation(this.station.route_name)
       .then((data) => {
         this.stationData = data
       })
