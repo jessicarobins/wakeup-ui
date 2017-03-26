@@ -46,6 +46,7 @@ export class StationPageComponent implements OnInit {
   stations: Station[]
   station: Station
   stationData: Station
+  isLoadingStationData: boolean
   
   constructor(
     private route: ActivatedRoute,
@@ -59,13 +60,16 @@ export class StationPageComponent implements OnInit {
       .subscribe((data: { stations: Station[], station: Station }) => {
         this.stations = data.stations
         this.station = this.stationData = data.station
+        this.isLoadingStationData = false;
       });
   }
   
   changeStation() {
+    this.isLoadingStationData = true
     this.ss.getStation(this.station.route_name)
       .then((data) => {
         this.stationData = data
+        this.isLoadingStationData = false
       })
     this.location.replaceState(this.station.route_name)
   }
