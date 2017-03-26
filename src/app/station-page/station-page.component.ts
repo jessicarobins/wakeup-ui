@@ -3,6 +3,8 @@ import { Component, OnInit,
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common'
 
+import * as moment from 'moment'
+
 import { Station, StationService } from './station.service'
 
 @Component({
@@ -111,5 +113,25 @@ export class StationPageComponent implements OnInit {
         return `${o} AM`
       })
     }
+  }
+  
+  parseGraphData() {
+    return this.stationData.last_bike_times.map(t => {
+      const parts = t.split('T')
+      const date = parts[0]
+      const time = moment(parts[1], "HH:mm").unix()
+      return {
+        date: date,
+        time: time
+      }
+    })
+  }
+  
+  graphData() {
+    return this.parseGraphData().map(d => d.time)
+  }
+  
+  graphLabels() {
+    return this.parseGraphData().map(d => d.date)
   }
 }

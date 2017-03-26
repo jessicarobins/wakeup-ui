@@ -9,7 +9,8 @@ export class Station {
     public latitude: number,
     public longitude: number,
     public statistics: any,
-    public route_name: string) {}
+    public route_name: string,
+    public last_bike_times: any[]) {}
 }
 
 import { Injectable } from '@angular/core';

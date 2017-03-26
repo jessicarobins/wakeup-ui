@@ -59,6 +59,10 @@
   class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
+    <canvas baseChart
+      [data]="graphData()"
+      [labels]="graphLabels()"
+      chartType="line"></canvas>
     <ul>
       <li *ngFor="let s of formattedStatistics() | keys">
         {{s.key}}: {{s.value}}
