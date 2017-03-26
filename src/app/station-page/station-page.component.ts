@@ -14,7 +14,7 @@ import { Station, StationService } from './station.service'
   animations: [
     trigger('stationFormSize', [
       state('true', style({
-        flex: '.0001',
+        flex: '.4',
       })),
       state('false',   style({
         flex: '1'
@@ -35,7 +35,7 @@ import { Station, StationService } from './station.service'
         flex: '.0001',
       })),
       state('true',   style({
-        flex: '1'
+        flex: '.7'
       })),
       transition('* => *', animate('.5s'))
     ])
