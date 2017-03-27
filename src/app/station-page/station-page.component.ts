@@ -48,6 +48,7 @@ export class StationPageComponent implements OnInit {
   stationData: Station
   isLoadingStationData: boolean
   showStationDetails: boolean
+  graphOptions: any
   
   constructor(
     private route: ActivatedRoute,
@@ -64,6 +65,23 @@ export class StationPageComponent implements OnInit {
         this.isLoadingStationData = false;
         this.showStationDetails = false;
       });
+      
+    this.graphOptions = {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        enabled: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            callback:(v)=>this.formatSecsAsMins(v),
+            stepSize: 300, //add a tick every 5 minutes
+          }
+        }]
+      },
+    }
   }
   
   changeStation() {
@@ -133,5 +151,9 @@ export class StationPageComponent implements OnInit {
   
   graphLabels() {
     return this.parseGraphData().map(d => d.date)
+  }
+  
+  formatSecsAsMins(t) {
+    return moment.unix(t).format("h:mm")
   }
 }

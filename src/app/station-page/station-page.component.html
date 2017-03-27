@@ -62,7 +62,8 @@
     <canvas baseChart
       [data]="graphData()"
       [labels]="graphLabels()"
-      chartType="line"></canvas>
+      chartType="line"
+      [options]="graphOptions"></canvas>
     <ul>
       <li *ngFor="let s of formattedStatistics() | keys">
         {{s.key}}: {{s.value}}
