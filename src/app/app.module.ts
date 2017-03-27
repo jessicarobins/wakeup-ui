@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import { ChartsModule } from 'ng2-charts'
-
 import 'chart.js'
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +28,8 @@ import { KeysPipe } from './keys.pipe'
     HttpModule,
     AppRoutingModule,
     Ng2AutoCompleteModule,
-    ChartsModule
+    ChartsModule,
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   providers: [
     StationResolver,
