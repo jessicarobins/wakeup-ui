@@ -41,3 +41,19 @@
   cursor: pointer;
   pointer-events: all;
 }
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats strong {
+  color: #fff;
+}
+
+.stats .pipe {
+  margin: 15px 10px;
+}

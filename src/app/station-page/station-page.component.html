@@ -64,11 +64,11 @@
       [labels]="graphLabels()"
       chartType="line"
       [options]="graphOptions"></canvas>
-    <ul>
-      <li *ngFor="let s of formattedStatistics() | keys">
-        {{s.key}}: {{s.value}}
-      </li>
-    </ul>
+    <div class="stats">
+      <span *ngFor="let s of formattedStatistics() | keys; let last = last">
+        <strong>{{s.key}}</strong>: {{s.value}} <span class="pipe" *ngIf="!last">|</span>
+      </span>
+    </div>
   </div>
   <button
     (click)="toggleStationDetails()"

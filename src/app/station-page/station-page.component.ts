@@ -127,9 +127,9 @@ export class StationPageComponent implements OnInit {
       q3: `${this.stationData.statistics.q3} AM`,
       min: `${this.stationData.statistics.min} AM`,
       max: `${this.stationData.statistics.max} AM`,
-      outliers: this.stationData.statistics.outliers.map((o) => {
+      outliers: this.stationData.statistics.outliers.length ? this.stationData.statistics.outliers.map((o) => {
         return `${o} AM`
-      })
+      }) : 'none'
     }
   }
   
