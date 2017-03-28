@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build && gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,7 @@
     "@types/moment": "^2.13.0",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
+    "gh-pages": "^0.12.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
