@@ -1,3 +1,5 @@
+import 'file-loader?name=CNAME!../CNAME'
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
