@@ -1,0 +1,10 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  display: none;
+}
+
+.icon {
+  color: #ffdd57;
+}

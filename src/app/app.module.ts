@@ -14,13 +14,15 @@ import { StationPageComponent } from './station-page/station-page.component';
 
 import { StationResolver, StationsResolver } from './station-page/station-resolver.service'
 import { StationService } from './station-page/station.service';
-import { KeysPipe } from './keys.pipe'
+import { KeysPipe } from './keys.pipe';
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     StationPageComponent,
-    KeysPipe
+    KeysPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
