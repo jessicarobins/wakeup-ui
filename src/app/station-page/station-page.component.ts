@@ -50,6 +50,7 @@ export class StationPageComponent implements OnInit {
   isLoadingStationData: boolean
   showStationDetails: boolean
   graphOptions: any
+  inputFocused: boolean
   
   constructor(
     private route: ActivatedRoute,
@@ -66,7 +67,9 @@ export class StationPageComponent implements OnInit {
         this.isLoadingStationData = false;
         this.showStationDetails = false;
       });
-      
+    
+    this.inputFocused = false
+    
     this.graphOptions = {
       legend: {
         display: false
@@ -115,10 +118,15 @@ export class StationPageComponent implements OnInit {
   }
   
   onInputFocus($event) {
+    this.inputFocused = true
     if (bowser.mobile) {
       $event.target.scrollIntoView( true )
     }
     $event.target.select();
+  }
+  
+  onInputFocusOut($event) {
+    this.inputFocused = false
   }
   
   formattedStatistics() {
@@ -159,5 +167,9 @@ export class StationPageComponent implements OnInit {
   
   formatSecsAsMins(t) {
     return moment.unix(t).format("h:mm")
+  }
+  
+  showVeryTallDropdown() {
+    return bowser.mobile && this.inputFocused
   }
 }

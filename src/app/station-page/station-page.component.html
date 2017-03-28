@@ -8,7 +8,9 @@
       class="title very-big">
       when's the last bike at
     </h1>
-    <div class="field">
+    <div 
+      [ngClass]="{'very-tall': showVeryTallDropdown()}"
+      class="field">
       <p class="control has-icon has-icon-right">
         <input
           class="input is-large"
@@ -21,7 +23,8 @@
           list-formatter="name"
           [match-formatted]="true"
           (valueChanged)="changeStation($event)"
-          (focus)="onInputFocus($event)" />
+          (focus)="onInputFocus($event)" 
+          (focusout)="onInputFocusOut($event)" />
         <span class="icon is-large" *ngIf="!station && !isLoadingStationData">
           <i class="fa fa-angle-down"></i>
         </span>
