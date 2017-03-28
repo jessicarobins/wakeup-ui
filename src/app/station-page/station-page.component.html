@@ -21,7 +21,7 @@
           list-formatter="name"
           [match-formatted]="true"
           (valueChanged)="changeStation($event)"
-          (focus)="selectAllContent($event)" />
+          (focus)="onInputFocus($event)" />
         <span class="icon is-large" *ngIf="!station && !isLoadingStationData">
           <i class="fa fa-angle-down"></i>
         </span>

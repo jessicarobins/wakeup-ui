@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common'
 
 import * as moment from 'moment'
+import * as bowser from 'bowser'
 
 import { Station, StationService } from './station.service'
 
@@ -113,7 +114,10 @@ export class StationPageComponent implements OnInit {
     this.showStationDetails = !this.showStationDetails
   }
   
-  selectAllContent($event) {
+  onInputFocus($event) {
+    if (bowser.mobile) {
+      $event.target.scrollIntoView( true )
+    }
     $event.target.select();
   }
   
