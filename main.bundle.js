@@ -8,7 +8,7 @@ webpackJsonp([1,4],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(445);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(719);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(720);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
 /* unused harmony export Station */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StationService; });
@@ -205,7 +205,7 @@ var StationPageComponent = (function () {
     StationPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-station-page',
-            template: __webpack_require__(713),
+            template: __webpack_require__(714),
             styles: [__webpack_require__(701)],
             animations: [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["trigger"])('stationFormSize', [
@@ -430,7 +430,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(711),
+            template: __webpack_require__(712),
             styles: [__webpack_require__(699)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angulartics2__["Angulartics2GoogleAnalytics"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angulartics2__["Angulartics2GoogleAnalytics"]) === 'function' && _a) || Object])
@@ -446,25 +446,27 @@ var AppComponent = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_auto_complete__ = __webpack_require__(706);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_auto_complete___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_auto_complete__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts__ = __webpack_require__(709);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_chart_js__ = __webpack_require__(598);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_chart_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angulartics2__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angulartics2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angulartics2__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routing_module__ = __webpack_require__(581);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(582);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__station_page_station_page_component__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__station_page_station_resolver_service__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__station_page_station_service__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__keys_pipe__ = __webpack_require__(584);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__navbar_navbar_component__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_file_loader_name_CNAME_CNAME__ = __webpack_require__(702);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_file_loader_name_CNAME_CNAME___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_file_loader_name_CNAME_CNAME__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_auto_complete__ = __webpack_require__(707);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_auto_complete___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_auto_complete__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_charts__ = __webpack_require__(710);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_chart_js__ = __webpack_require__(598);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_chart_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angulartics2__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angulartics2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angulartics2__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing_module__ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__(582);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__station_page_station_page_component__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__station_page_station_resolver_service__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__station_page_station_service__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__keys_pipe__ = __webpack_require__(584);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__navbar_navbar_component__ = __webpack_require__(585);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -490,32 +492,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__station_page_station_page_component__["a" /* StationPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__keys_pipe__["a" /* KeysPipe */],
-                __WEBPACK_IMPORTED_MODULE_14__navbar_navbar_component__["a" /* NavbarComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__station_page_station_page_component__["a" /* StationPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__keys_pipe__["a" /* KeysPipe */],
+                __WEBPACK_IMPORTED_MODULE_15__navbar_navbar_component__["a" /* NavbarComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormsModule"],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_8__app_routing_module__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_4_ng2_auto_complete__["Ng2AutoCompleteModule"],
-                __WEBPACK_IMPORTED_MODULE_5_ng2_charts__["ChartsModule"],
-                __WEBPACK_IMPORTED_MODULE_7_angulartics2__["Angulartics2Module"].forRoot([__WEBPACK_IMPORTED_MODULE_7_angulartics2__["Angulartics2GoogleAnalytics"]])
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormsModule"],
+                __WEBPACK_IMPORTED_MODULE_4__angular_http__["HttpModule"],
+                __WEBPACK_IMPORTED_MODULE_9__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_5_ng2_auto_complete__["Ng2AutoCompleteModule"],
+                __WEBPACK_IMPORTED_MODULE_6_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_8_angulartics2__["Angulartics2Module"].forRoot([__WEBPACK_IMPORTED_MODULE_8_angulartics2__["Angulartics2GoogleAnalytics"]])
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_11__station_page_station_resolver_service__["a" /* StationResolver */],
-                __WEBPACK_IMPORTED_MODULE_11__station_page_station_resolver_service__["b" /* StationsResolver */],
-                __WEBPACK_IMPORTED_MODULE_12__station_page_station_service__["a" /* StationService */]
+                __WEBPACK_IMPORTED_MODULE_12__station_page_station_resolver_service__["a" /* StationResolver */],
+                __WEBPACK_IMPORTED_MODULE_12__station_page_station_resolver_service__["b" /* StationsResolver */],
+                __WEBPACK_IMPORTED_MODULE_13__station_page_station_service__["a" /* StationService */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
@@ -587,7 +590,7 @@ var NavbarComponent = (function () {
     NavbarComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navbar',
-            template: __webpack_require__(712),
+            template: __webpack_require__(713),
             styles: [__webpack_require__(700)]
         }), 
         __metadata('design:paramtypes', [])
@@ -640,7 +643,7 @@ exports = module.exports = __webpack_require__(56)();
 
 
 // module
-exports.push([module.i, ".nav {\n  position: fixed;\n  width: 100%;\n  background-color: transparent;\n  display: none;\n}\n\n.icon {\n  color: #ffdd57;\n}", ""]);
+exports.push([module.i, ".nav {\n  position: fixed;\n  width: 100%;\n  background-color: transparent;\n}\n\n.icon {\n  color: #ffdd57;\n}", ""]);
 
 // exports
 
@@ -668,7 +671,14 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 705:
+/***/ 702:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "CNAME";
+
+/***/ }),
+
+/***/ 706:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -917,33 +927,33 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 705;
+webpackContext.id = 706;
 
-
-/***/ }),
-
-/***/ 711:
-/***/ (function(module, exports) {
-
-module.exports = "<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
 /***/ 712:
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav\">\n  <div class=\"nav-right\">\n    <a class=\"nav-item\">\n      <span class=\"icon is-large\">\n        <i class=\"fa fa-question-circle\" aria-hidden=\"true\"></i>\n      </span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = "<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
 /***/ 713:
 /***/ (function(module, exports) {
 
+module.exports = "<nav class=\"nav\">\n  <div class=\"nav-right\">\n    <a\n      target=\"_blank\"\n      class=\"nav-item\"\n      href=\"https://medium.com/@jessrrobins/what-time-do-i-have-to-wake-up-to-get-a-bike-112a110a91dd\n\">\n      <span class=\"icon is-large\">\n        <i class=\"fa fa-question-circle\" aria-hidden=\"true\"></i>\n      </span>\n    </a>\n  </div>\n</nav>\n"
+
+/***/ }),
+
+/***/ 714:
+/***/ (function(module, exports) {
+
 module.exports = "<section class=\"stations container has-text-centered\">\n  <div\n    [ngClass]=\"{'with-station': !!stationData}\"\n    [@stationFormSize]=\"!!stationData\"\n    class=\"form-container\">\n    <h1\n      [@stationTitleSize]=\"!!stationData\"\n      class=\"title very-big\">\n      when's the last bike at\n    </h1>\n    <div \n      [ngClass]=\"{'very-tall': showVeryTallDropdown()}\"\n      class=\"field\">\n      <p class=\"control has-icon has-icon-right\">\n        <input\n          class=\"input is-large\"\n          auto-complete\n          [(ngModel)]=\"station\"\n          [source]=\"stations\"\n          display-property-name=\"name\"\n          placeholder=\"Select a station\"\n          value-formatter=\"name\"\n          list-formatter=\"name\"\n          [match-formatted]=\"true\"\n          (valueChanged)=\"changeStation($event)\"\n          (focus)=\"onInputFocus($event)\" \n          (focusout)=\"onInputFocusOut($event)\" />\n        <span class=\"icon is-large\" *ngIf=\"!station && !isLoadingStationData\">\n          <i class=\"fa fa-angle-down\"></i>\n        </span>\n        <span\n          class=\"icon is-medium\"\n          *ngIf=\"isLoadingStationData\">\n          <i class=\"fa fa-cog fa-spin fa-fw\"></i>\n        </span>\n        <span\n          (click)=\"removeStation()\"\n          class=\"icon is-medium remove-station\"\n          *ngIf=\"station && !isLoadingStationData\">\n          <i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i>\n        </span>\n      </p>\n    </div>\n  </div>\n  <div\n    [@stationTimeSize]=\"!!stationData\">\n    <p class=\"title very-very-big\">\n      {{time()}}\n    </p>\n    <a\n      [ngClass]=\"{'hidden': !stationData}\"\n      class=\"button is-warning is-outlined\"\n      (click)=\"toggleStationDetails()\">\n      More info\n    </a>\n  </div>\n  \n</section>\n<div\n  *ngIf=\"!!showStationDetails\"\n  [ngClass]=\"{'is-active': !!showStationDetails}\"\n  class=\"modal\">\n  <div class=\"modal-background\"></div>\n  <div class=\"modal-content\">\n    <canvas baseChart\n      [data]=\"graphData()\"\n      [labels]=\"graphLabels()\"\n      chartType=\"line\"\n      [options]=\"graphOptions\"></canvas>\n    <div class=\"stats\">\n      <span *ngFor=\"let s of formattedStatistics() | keys; let last = last\">\n        <strong>{{s.key}}</strong>: {{s.value}} <span class=\"pipe\" *ngIf=\"!last\">|</span>\n      </span>\n    </div>\n  </div>\n  <button\n    (click)=\"toggleStationDetails()\"\n    class=\"modal-close\"></button>\n</div>\n"
 
 /***/ }),
 
-/***/ 742:
+/***/ 743:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(465);
@@ -951,5 +961,5 @@ module.exports = __webpack_require__(465);
 
 /***/ })
 
-},[742]);
+},[743]);
 //# sourceMappingURL=main.bundle.js.map
