@@ -1,4 +1,5 @@
 import 'file-loader?name=CNAME!../CNAME'
+import 'file-loader?name=404.html!../404.html'
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

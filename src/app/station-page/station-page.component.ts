@@ -100,7 +100,7 @@ export class StationPageComponent implements OnInit {
   
   time() {
     if (this.stationData) {
-      return this.stationData.statistics.mean ? 
+      return this.stationData.statistics ? 
         `${this.stationData.statistics.mean} AM`
         : 'No data'
     }
@@ -130,18 +130,20 @@ export class StationPageComponent implements OnInit {
   }
   
   formattedStatistics() {
-    return {
-      median: `${this.stationData.statistics.median} AM`,
-      mean: `${this.stationData.statistics.mean} AM`,
-      'standard deviation': `${this.stationData.statistics.standard_deviation} minutes`,
-      range: `${this.stationData.statistics.range} minutes`,
-      q1: `${this.stationData.statistics.q1} AM`,
-      q3: `${this.stationData.statistics.q3} AM`,
-      min: `${this.stationData.statistics.min} AM`,
-      max: `${this.stationData.statistics.max} AM`,
-      outliers: this.stationData.statistics.outliers.length ? this.stationData.statistics.outliers.map((o) => {
-        return `${o} AM`
-      }) : 'none'
+    if (this.stationData) {
+      return {
+        median: `${this.stationData.statistics.median} AM`,
+        mean: `${this.stationData.statistics.mean} AM`,
+        'standard deviation': `${this.stationData.statistics.standard_deviation} minutes`,
+        range: `${this.stationData.statistics.range} minutes`,
+        q1: `${this.stationData.statistics.q1} AM`,
+        q3: `${this.stationData.statistics.q3} AM`,
+        min: `${this.stationData.statistics.min} AM`,
+        max: `${this.stationData.statistics.max} AM`,
+        outliers: this.stationData.statistics.outliers.length ? this.stationData.statistics.outliers.map((o) => {
+          return `${o} AM`
+        }) : 'none'
+      }
     }
   }
   

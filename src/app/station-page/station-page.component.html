@@ -18,7 +18,7 @@
           [(ngModel)]="station"
           [source]="stations"
           display-property-name="name"
-          placeholder="Select a station"
+          placeholder="Select or type in a station"
           value-formatter="name"
           list-formatter="name"
           [match-formatted]="true"
@@ -48,7 +48,7 @@
       {{time()}}
     </p>
     <a
-      [ngClass]="{'hidden': !stationData}"
+      [ngClass]="{'hidden': !stationData || !stationData.statistics}"
       class="button is-warning is-outlined"
       (click)="toggleStationDetails()">
       More info
