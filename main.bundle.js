@@ -140,7 +140,7 @@ var StationPageComponent = (function () {
     };
     StationPageComponent.prototype.time = function () {
         if (this.stationData) {
-            return this.stationData.statistics.mean ?
+            return this.stationData.statistics ?
                 this.stationData.statistics.mean + " AM"
                 : 'No data';
         }
